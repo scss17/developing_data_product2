@@ -1,0 +1,53 @@
+---
+title: "Course Project: Shiny Application and Reproducible Pitch"
+author: "PS"
+date: "30/11/2020"
+output: ioslides_presentation
+---
+
+## About the Course Project
+
+This Shiny App is a part of the submissions for the course Developing Data Products as part of the Coursera Data Science Specialization.
+
+Instructions:
+
+1. Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.
+2. Deploy the application on Rstudio's shiny server
+3. Share the application link by pasting it into the provided text box
+4. Share your server.R and ui.R code on github
+
+## Background 
+
+In probability theory and statistics, a probability distribution is the mathematical function that gives the probabilities of occurrence of different possible outcomes for an experiment. The distributions are broadly categorized as either discrete or continuous. For these simple little Shiny App we consider two distributions: 
+
+   + **Normal Distribution**: The normal distribution is characterized by a distinctive "bell-shaped" curve, is also referred as a *Gaussian* distribution. 
+    
+    
+   + **Binomial Distribution**: The binomial distribution is the distribution of successes in *n* number of trials involving binary discrete random variables.
+
+## Normal Distribution
+
+The **Normal Distribution** requires two parameters the mean ($\mu$) and standard deviation ($\sigma$). These parameters fully define a particular normal distribution. The following example use $\mu = 0$ and $\sigma = 1$. 
+
+```{r Nommal Dsitribution, echo=FALSE}
+plot(seq(-4, 4, 0.1), dnorm(seq(-4, 4, 0.1), mean = 0, sd = 1),
+                                     type = "l",
+                                     main = "Normal Distribution",
+                                     ylab = "Density",
+                                     xlab = "Mean",
+                                     lwd=3)
+```
+
+## Binomial Distribution
+
+The **Binomial Distribution** uses two parameters. The number of trials and the probability of success. The following example use $n = 15$ and $p = 2/3$. 
+
+```{r Binomial Distribution, echo=FALSE}
+plot(1:15, dbinom(1:15, size = 15 ,prob = 2/3),
+                                     type = "h",
+                                     main = "Binomial Distribution",
+                                     ylab = "Probability",
+                                     xlab = "# Successes",
+                                     lwd=3)
+```
+
